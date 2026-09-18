@@ -11,12 +11,12 @@ from __future__ import annotations
 import random
 
 from .life import (
-    HEIGHT,
-    WIDTH,
-    LifeGrid,
     _BIRTH_COUNTS,
     _MUTATION_PROBABILITY,
     _SURVIVAL_COUNTS,
+    HEIGHT,
+    WIDTH,
+    LifeGrid,
 )
 
 
