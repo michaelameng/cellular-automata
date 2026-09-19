@@ -109,7 +109,6 @@ a {
   overflow: hidden;
 }
 
-/* A thin inset outline draws the grid lines without adding real layout gaps, so they stay hairline-thin at any cell size. */
 .cell {
   aspect-ratio: 1;
   min-width: 0;

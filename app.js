@@ -36,7 +36,11 @@ class LifeGrid {
   livingNeighbours(column, row) {
     let count = 0;
     for (let r = Math.max(0, row - 1); r < Math.min(HEIGHT, row + 2); r++) {
-      for (let c = Math.max(0, column - 1); c < Math.min(WIDTH, column + 2); c++) {
+      for (
+        let c = Math.max(0, column - 1);
+        c < Math.min(WIDTH, column + 2);
+        c++
+      ) {
         if ((c !== column || r !== row) && this.cells[r][c]) count++;
       }
     }
@@ -69,7 +73,7 @@ class LifeGrid {
     const nextAlive = [];
     for (let row = 0; row < HEIGHT; row++) {
       for (let column = 0; column < WIDTH; column++) {
-        if (this.cells[row][column] !== (Math.random() < probability)) {
+        if (this.cells[row][column] !== Math.random() < probability) {
           nextAlive.push([column, row]);
         }
       }
@@ -159,7 +163,10 @@ class SimulationState {
     return {
       cells,
       generation: this.genIndex,
-      livingCells: cells.reduce((sum, row) => sum + row.reduce((a, b) => a + b, 0), 0),
+      livingCells: cells.reduce(
+        (sum, row) => sum + row.reduce((a, b) => a + b, 0),
+        0,
+      ),
       birth: [...this.birthCounts].sort((a, b) => a - b),
       survival: [...this.survivalCounts].sort((a, b) => a - b),
       mutationProbability: this.mutationProbability,
