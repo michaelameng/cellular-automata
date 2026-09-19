@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- GitHub Pages serves this root index file as the project-page entry point. -->
     <main>
       <h1>Cellular Automata</h1>
       <p>
-        Click cells to edit. Choose which live-neighbour counts cause birth (B)
-        and survival (S), and set a mutation chance to randomly flip cells each
-        generation.
+        Click cells to turn them on, then set the rules that drive the
+        simulation. Birth (B) picks how many of a cell's eight neighbors must be
+        on for it to switch on, and Survival (S) picks how many must be on for it
+        to stay on. Choose several counts in either category and they combine
+        with a logical OR.
+      </p>
+      <p>
+        Mutation adds a dash of chance: after each step, every cell flips on or
+        off with the probability you set, so 0% follows the rules exactly and
+        higher values keep the board restless. The buttons just above the grid
+        let you step through generations, play or pause the simulation, drop in a
+        random board, or reset to a blank grid.
       </p>
       <div id="rule-picker">
         <div class="rule-row" id="birth-row">

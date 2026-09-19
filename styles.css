@@ -46,7 +46,7 @@ h1 {
 
 p {
   color: var(--muted);
-  max-width: 60ch;
+  max-width: 80ch;
 }
 
 a {
